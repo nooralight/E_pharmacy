@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Role;
 
-class User extends Model
+class Role extends Model
 {
     use HasFactory;
-    protected $guarded = ["created_at","updated_at"];
+    protected $fillable=["name"];
 
-    public function roles(){
-        return $this->belongsToMany(Role::class)->withTimestamps();
+    public function users(){
+        return $this->belongsToMany(User::class)->withTimestamps();
     }
 }
