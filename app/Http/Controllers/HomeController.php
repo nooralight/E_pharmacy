@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Drug;
+use App\Models\User;
 use App\Models\Employee;
 
 class HomeController extends Controller
@@ -32,10 +33,14 @@ class HomeController extends Controller
 
     
 
-    public function gotoDrug(){
+    public function gotoDrug(Request $request){
         $drugs= Drug::all();
         //dd($posts);
-        return view("drugs.drug_list")->with(["drugs"=>$drugs]);
+        $user= User::find($request->session()->get('user_id'));
+        if($user->roles()->where("name", "ROLE_ADMIN")->first()){
+            return view("drugs.drug_list1")->with(["drugs"=>$drugs]);
+        }
+        return view("drugs.drug_list2")->with(["drugs"=>$drugs]);
     }
 
     public function gotoContact(){
