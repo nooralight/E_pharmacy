@@ -11,7 +11,10 @@ class HomeController extends Controller
 
     //goto home
     public function gotoHome(){
-        return view( "home");
+        if(!session()->has("user_id")){
+            return view("home1");
+        }
+        return view( "home2");
     }
 
 

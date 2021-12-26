@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/",[\App\Http\Controllers\LoginController::class, "gotoLogin"])->name("loginPage");
+
+Route::get("/",[\App\Http\Controllers\HomeController::class, "gotoHome"])->name("home");
+Route::get("/login",[\App\Http\Controllers\LoginController::class, "gotoLogin"])->name("loginPage");
 Route::post("login",[\App\Http\Controllers\LoginController::class, "checkUser"])->name("login");
 Route::post("signpup",[\App\Http\Controllers\LoginController::class, "signUp"])->name("signup");
 
 Route::middleware(['user.auth'])->group(function(){
     Route::get("/logout",[\App\Http\Controllers\LoginController::class, "logOut"])->name("logout");
-    Route::get("/home",[\App\Http\Controllers\HomeController::class, "gotoHome"])->name("home");
+    
     //Drugs
     Route::get("/drag_list",[\App\Http\Controllers\HomeController::class, "gotoDrug"])->name("homeTodrug");
     Route::get("/buy/{drug}/drug",[\App\Http\Controllers\DrugController::class, "buyDrug"])->name("buydrug");

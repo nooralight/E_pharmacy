@@ -115,7 +115,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <section id="introblocks">
       <ul class="nospace group grid-3">
         <li class="one_third">
-          <figure><img src="{{asset("images1/drugs/rsz_entacyd.jpg")}}" alt="">
+          <figure><img src="{{asset("images1/drugs/rsz_antacyd.jpg")}}" alt="">
           
             <p>Entacyd Tablet</p>
             <figcaption><a href="#">Buy</a></figcaption>
