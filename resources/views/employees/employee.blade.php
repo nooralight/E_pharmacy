@@ -2,7 +2,7 @@
     <head>
       <style>
         body{
-          background: url('{{ asset('img/emp_cover1.jpg')}}')center / cover no-repeat;
+          background: url('{{ asset('img/22.jpg')}}')center / cover no-repeat;
   	      height: 100vh;
 	        margin: 0;
           position: relative;

@@ -90,8 +90,8 @@ Licence URI: https://www.os-templates.com/template-terms
         <p>Welcome</p>
         <footer>
           <ul class="nospace inline pushright">
-            <li><a class="btn inverse" href="#">Shopping</a></li>
-            <li><a class="btn inverse" href="#">Contact</a></li>
+            <li><a class="btn inverse" href="{{route("homeTodrug")}}">Shopping</a></li>
+            <li><a class="btn inverse" href="{{route("contactPage")}}">Contact</a></li>
           </ul>
         </footer>       
       </article>

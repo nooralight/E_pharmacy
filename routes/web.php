@@ -29,7 +29,9 @@ Route::middleware(['user.auth'])->group(function(){
     Route::get("/search_by_name",[\App\Http\Controllers\HomeController::class, "gotoNameS"])->name("name.search");
     Route::get("/search_by_brand",[\App\Http\Controllers\HomeController::class, "gotoNameB"])->name("brand.search");
     Route::get("/search_name",[\App\Http\Controllers\SearchController::class, "search_Name"])->name("searchByname");
+    Route::get("/search_name1",[\App\Http\Controllers\SearchController::class, "search_Name1"])->name("searchByname1");
     Route::get("/search_brand",[\App\Http\Controllers\SearchController::class, "search_Brand"])->name("searchBybrand");
+    Route::get("/search_brand1",[\App\Http\Controllers\SearchController::class, "search_Brand1"])->name("searchBybrand1");
 
     Route::get("/contact",[\App\Http\Controllers\HomeController::class, "gotoContact"])->name("contactPage");
 

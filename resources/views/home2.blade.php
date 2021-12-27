@@ -43,11 +43,12 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </section>
 </div>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay padtop" style="background-color: #2c3e50;"> 
+<div class="bgded overlay padtop" style="background-color:  #1777aa ;"> 
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
@@ -60,12 +61,6 @@ Licence URI: https://www.os-templates.com/template-terms
     <nav id="mainav" class="fl_right"> 
       <!-- ################################################################################################ -->
       <ul class="clear">
-        <li><a class="drop" href="#" style="color:  #b45e11 ;">Search</a>
-          <ul>
-            <li><a href="{{route("name.search")}}" style="color:black;">By Name</a></li>
-            <li><a href="{{route("brand.search")}}" style="color:black;">By Brand</a></li>
-          </ul>
-        </li>
         <li><a class="drop" href="#" style="color:  #b45e11 ;">Medicines</a>
           <ul>
             <li><a href="{{route("homeTodrug")}}" style="color:black;">Shopping</a></li>
@@ -75,6 +70,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <li><a href="{{route("homeToemployee")}}" style="color:  #b45e11 ;">Employee(Admin)</a></li>
         <li><a href="{{route("contactPage")}}" style="color:  #b45e11 ;">Contact</a></li>
         <li><a href="{{route("logout")}}" style="color:  #b45e11 ;">Logout</a></li>
+        
       </ul>
       <!-- ################################################################################################ -->
     </nav>
@@ -90,8 +86,16 @@ Licence URI: https://www.os-templates.com/template-terms
         <p>Welcome</p>
         <footer>
           <ul class="nospace inline pushright">
-            <li><a class="btn inverse" href="#">Shopping</a></li>
-            <li><a class="btn inverse" href="#">Contact</a></li>
+            <li><a class="btn inverse" href="{{route("homeTodrug")}}">Shopping</a></li>
+            
+            <li>
+        <form action="{{ route('searchByname1') }}" method="GET">
+        
+        <input type="text" style="color: black;" name="search" placeholder="search here.." required/>
+        <button style="color:black" type="submit">Search</button>  
+        </form>
+        </li>
+            
           </ul>
         </footer>       
       </article>
