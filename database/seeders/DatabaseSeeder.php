@@ -16,18 +16,20 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        $user= User::create([
-            "username"=>"noorLight",
-            "email"=>"contactwnoor@gmail.com",
-            "password"=>"6984125o",
+        
+
+        $user1= User::create([
+            "username"=>"shovon",
+            "email"=>"shovon@gmail.com",
+            "password"=>"1234",
         ]);
 
 
         //save role
 
-        $role= $user->roles()->create([
+        $role1= $user1->roles()->create([
             "name"=>"ROLE_ADMIN",
         ]);
-        $user->roles()->sync([$role->id]);
+        $user1->roles()->sync([$role1->id]);
     }
 }

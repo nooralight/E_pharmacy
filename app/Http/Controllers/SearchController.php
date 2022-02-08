@@ -8,13 +8,13 @@ use App\Models\Drug;
 class SearchController extends Controller
 {
 
-    
+
     public function search_Name(Request $request)
     {
         if($request->ajax())
         {
             $data = Drug::where('name', 'LIKE', $request->search.'%')->get();
-       
+
             $output = '';
             if(count($data)>0)
             {
@@ -33,7 +33,7 @@ class SearchController extends Controller
                 $output .= '<p>No result</p>';
                 return ($output);
             }
-            
+
         }
     }
 
@@ -43,7 +43,7 @@ class SearchController extends Controller
         if($request->ajax())
         {
             $data = Drug::where('brand', 'LIKE', $request->search.'%')->get();
-       
+
             $output = '';
             if(count($data)>0)
             {
@@ -62,20 +62,20 @@ class SearchController extends Controller
                 $output .= '<p>No result</p>';
                 return ($output);
             }
-            
+
         }
     }
 
     public function search_Name1(Request $request){
         // Get the search value from the request
         $search = $request->input('search');
-    
+
         // Search in the title and body columns from the posts table
         $drugs = Drug::query()
             ->where('name', 'LIKE', "%{$search}%")
             ->orWhere('brand', 'LIKE', "%{$search}%")
             ->get();
-        print(gettype($drugs));
+        //print(gettype($drugs));
         // Return the search view with the resluts compacted
         return view('drugs.search_Name1', compact('drugs'));
     }
@@ -83,7 +83,7 @@ class SearchController extends Controller
     public function search_Brand1(Request $request){
         // Get the search value from the request
         $search = $request->input('search');
-    
+
         // Search in the title and body columns from the posts table
         $drugs = Drug::query()
             ->where('brand', 'LIKE', "%{$search}%")

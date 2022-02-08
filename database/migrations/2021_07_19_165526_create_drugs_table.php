@@ -20,6 +20,9 @@ class CreateDrugsTable extends Migration
             $table->integer("mg");
             $table->integer("quantity");
             $table->string("image");
+            $table->string("catagory");
+            $table->string("scientific");
+            $table->float("price");
             $table->char("status")->default("Y")->comment("Y= available, N= not available");
             $table->timestamps();
         });

@@ -29,6 +29,13 @@ class LoginController extends Controller
 
         //dd($request);
         $request->session()->put("user_id",$info->id);
+
+        $user= User::find($info->id);
+        if($user->roles()->where("name", "ROLE_ADMIN")->first()){
+            return redirect()->route("admin");
+        }
+
+
         return redirect()->route("home");
     }
     public function logOut(Request $request){
@@ -38,7 +45,7 @@ class LoginController extends Controller
 
     public function signUp(Request $request){
         $user= User::create($request->all());
-        
+
         $user->roles()->create([
             "name"=>"USER",
         ]);

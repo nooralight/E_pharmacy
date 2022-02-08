@@ -28,13 +28,13 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <ul class="nospace clear">
       <li class="one_quarter first">
-        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +00 (123) 456 7890</span></div>
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +00 (xxx) xxx xxxx</span></div>
       </li>
       <li class="one_quarter">
         <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong> support@domain.com</span></div>
       </li>
       <li class="one_quarter">
-        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Sat.:</strong> 08.00am - 18.00pm</span></div>
+        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Sun.:</strong> 24 hours</span></div>
       </li>
       <li class="one_quarter">
         <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come visit us:</strong> Directions to <a href="#">our location</a></span></div>
@@ -47,25 +47,20 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay padtop" style="background-color: #2c3e50;"> 
+<div class="bgded overlay padtop" style="background-color: #1777aa;"> 
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <header id="header" class="hoc clear" style="background: cornsilk;">
     <div id="logo" class="fl_left"> 
       <!-- ################################################################################################ -->
-      <h1 style="color:  #b45e11 ;"><a href="index.html">E-Pharmacy</a></h1>
+      <h1 style="color:  #b45e11 ;"><a href="{{route("home")}}">E-Pharmacy</a></h1>
       <!-- ################################################################################################ -->
     </div>
     <nav id="mainav" class="fl_right"> 
       <!-- ################################################################################################ -->
       <ul class="clear">
-        <li><a class="drop" href="#" style="color:  #b45e11 ;">Search</a>
-          <ul>
-            <li><a href="{{route("name.search")}}" style="color:black;">By Name</a></li>
-            <li><a href="{{route("brand.search")}}" style="color:black;">By Brand</a></li>
-          </ul>
-        </li>
+        
         <li><a class="drop" href="#" style="color:  #b45e11 ;">Medicines</a>
           <ul>
             <li><a href="{{route("homeTodrug")}}" style="color:black;">Shopping</a></li>
@@ -87,11 +82,17 @@ Licence URI: https://www.os-templates.com/template-terms
       
     <article class="fl_left">
         <h3 class="heading">E-Pharmacy</h3>
-        <p>Welcome</p>
+        <p>Welcome to our E-pharmacy shop. We are alive for 24 hours a day to serve out online customers. Enjoy shopping!</p>
         <footer>
           <ul class="nospace inline pushright">
             <li><a class="btn inverse" href="{{route("homeTodrug")}}">Shopping</a></li>
-            <li><a class="btn inverse" href="{{route("contactPage")}}">Contact</a></li>
+            <li>
+        <form action="{{ route('searchByname1') }}" method="GET">
+        
+        <input type="text" style="color: black;" name="search" placeholder="search here.." required/>
+        <button style="color:black" type="submit">Search</button>  
+        </form>
+        </li>
           </ul>
         </footer>       
       </article>
@@ -134,6 +135,9 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
       </ul>
+      <article class="container">
+        <h6 style="color: blue;">Our Latest Medicines</h6>
+      </article>
     </section>
     <!-- ################################################################################################ -->
     <!-- / main body -->

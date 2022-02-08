@@ -28,8 +28,8 @@ body {
     --container-width: 800px;
     --container-height: 695px;
     --line-offset: calc((100% - var(--container-height))/ 2 + var(--menu-item-size) + 0.6em);
-    
-    
+
+
 }
 
 
@@ -54,7 +54,7 @@ body {
 .main-menu > li {
     box-sizing: border-box;
     height: var(--menu-item-size);
-    width: calc(3.5 * var(--menu-item-size));  
+    width: calc(3.5 * var(--menu-item-size));
     line-height: var(--menu-item-size);
     padding: 0 2em;
     margin: 1px;
@@ -157,7 +157,7 @@ h1 {
 
 .submenu > li {
     background: #dedede;
-    border-bottom: 1px solid var(--gray-color); 
+    border-bottom: 1px solid var(--gray-color);
     color: #777;
     padding: 1.2em 1em;
     transition: 0.3s all linear;
@@ -207,11 +207,23 @@ h1 {
                     <div class="col-md-2">
                         <label class="form-label">Photo</label>
                         <input type="file" name="image" class="form-control" id="inputCity">
-                    </div>             
+                    </div>
+                    <div class="col-md-2" style="margin-left: 118px">
+                        <label  class="form-label">Catagory</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="catagory">
+                    </div>
+                    <div class="col-md-2" >
+                        <label  class="form-label">Price</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="price">
+                    </div>
+                    <div class="col-md-4" >
+                        <label  class="form-label">Scientific Name</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="scientific">
+                    </div>
                     <div class="col-6" style="margin-left: 288px;margin-top:40px;">
                       <button style="width:120px" type="submit" class="btn btn-primary">Save</button>
                     </div>
-                    
+
                 </form>
             </article>
         </div>

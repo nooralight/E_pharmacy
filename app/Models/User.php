@@ -15,4 +15,7 @@ class User extends Model
     public function roles(){
         return $this->belongsToMany(Role::class)->withTimestamps();
     }
+    public function cart(){
+        return $this->hasOne(Cart::class);
+    }
 }
